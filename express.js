@@ -61,7 +61,7 @@ app.post('/post', (req, res) => {
 app.get('/sendPrivateMsg', (req, res) => {
      sillyGirl.push({
           imType: "tg",
-          userID: "1837585653",
+          userID: "183758553",
           content: "你的大香蕉成熟了，请快到app领取。"
      })
 })
@@ -70,7 +70,7 @@ app.get('/sendPrivateMsg', (req, res) => {
 app.post('/sendGroupMsg', (req, res) => {
      sillyGirl.push({
           imType: "tg",
-          groupCode: -1001583071436,
+          groupCode: -100153071436,
           content: "该喝开水啦。"
      })
 })
