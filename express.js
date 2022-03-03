@@ -112,7 +112,7 @@ app.get("/admin", (req, res) => {
           {
                title: "傻妞后台管理", data: {
                     help1: "使用set sillyGirl webpwd ? 设置",
-                    help2: "默认：sillyGirl"
+                    help2: "默认密码:sillyGirl.Github"
                }
           }
      )
