@@ -86,9 +86,9 @@ app.get('/lastTime', (req, res) => {
 
 // 检查Cookie
 function checkCookie(req, res, func) {
-     var webpwdStore = sillyGirl.bucketGet("sillyGirl", "webpwd")
+     var webpwdStore = sillyGirl.bucketGet("sillyGirl.Github", "webpwd")
      if (webpwdStore == "") {
-          webpwdStore = "sillyGirl"
+          webpwdStore = "sillyGirl.Github"
      }
      if (req.cookie("webpwd") != webpwdStore) {
           res.render(
