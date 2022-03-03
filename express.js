@@ -121,9 +121,9 @@ app.get("/admin", (req, res) => {
 // 登录请求
 app.post("/login", (req, res) => {
      var webpwd = req.postForm("password")
-     var webpwdStore = sillyGirl.bucketGet("sillyGirl", "webpwd")
+     var webpwdStore = sillyGirl.bucketGet("sillyGirl.Github", "webpwd")
      if (webpwdStore == "") {
-          webpwdStore = "sillyGirl"
+          webpwdStore = "sillyGirl.Github"
      }
      if (webpwd != webpwdStore) {
           res.render(
