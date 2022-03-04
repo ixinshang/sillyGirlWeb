@@ -5,7 +5,7 @@ var logs = Logger();
 // 获取傻妞实例
 var sillyGirl = SillyGirl();
 
-var buckets = ["wx", "qq", "jd_cookie", "sillyGirl", "fanlivip", "otto", "reply", "wxsv", "qinglong", "wxmp", "tg", "pinQQ", "pinWX", "pinWXMP", "pinTG"];
+var buckets = ["wx", "qq", "jd_cookie", "sillyGirl", "fanlivip", "otto", "reply", "wxsv", "qinglong", "wxmp", "tg", "pinQQ", "pinWX", "pinWXMP", "pinTG", "pgm"];
 
 // 首页
 app.get("/", (req, res) => {
