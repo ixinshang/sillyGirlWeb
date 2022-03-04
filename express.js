@@ -61,7 +61,7 @@ app.post('/post', (req, res) => {
 app.get('/sendPrivateMsg', (req, res) => {
      sillyGirl.push({
           imType: "tg",
-          userID: "183758553",
+          userID: "1837585653",
           content: "你的大香蕉成熟了，请快到app领取。"
      })
 })
@@ -70,7 +70,7 @@ app.get('/sendPrivateMsg', (req, res) => {
 app.post('/sendGroupMsg', (req, res) => {
      sillyGirl.push({
           imType: "tg",
-          groupCode: -100153071436,
+          groupCode: -1001583071436,
           content: "该喝开水啦。"
      })
 })
@@ -86,9 +86,9 @@ app.get('/lastTime', (req, res) => {
 
 // 检查Cookie
 function checkCookie(req, res, func) {
-     var webpwdStore = sillyGirl.bucketGet("sillyGirl.Github", "webpwd")
+     var webpwdStore = sillyGirl.bucketGet("sillyGirl", "webpwd")
      if (webpwdStore == "") {
-          webpwdStore = "sillyGirl.Github"
+          webpwdStore = "sillyGirl"
      }
      if (req.cookie("webpwd") != webpwdStore) {
           res.render(
@@ -112,7 +112,7 @@ app.get("/admin", (req, res) => {
           {
                title: "傻妞后台管理", data: {
                     help1: "使用set sillyGirl webpwd ? 设置",
-                    help2: "默认密码:sillyGirl.Github"
+                    help2: "默认密码: sillyGirl"
                }
           }
      )
@@ -121,9 +121,9 @@ app.get("/admin", (req, res) => {
 // 登录请求
 app.post("/login", (req, res) => {
      var webpwd = req.postForm("password")
-     var webpwdStore = sillyGirl.bucketGet("sillyGirl.Github", "webpwd")
+     var webpwdStore = sillyGirl.bucketGet("sillyGirl", "webpwd")
      if (webpwdStore == "") {
-          webpwdStore = "sillyGirl.Github"
+          webpwdStore = "sillyGirl"
      }
      if (webpwd != webpwdStore) {
           res.render(
